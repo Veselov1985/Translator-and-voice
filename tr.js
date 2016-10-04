@@ -59,10 +59,6 @@ $("#govoice").on ("click",voiceYandex);
 
 
 
-
-
-
-
 function translate () {
 
 	 
@@ -125,30 +121,28 @@ window.ya.speechkit.settings.lang = choislan;
 
 
 var tts = new ya.speechkit.Tts(
-      // Настройки синтеза. Список доступных настроек см. в справочнике.
+     
       {
-        // API-ключ. Может быть задан глобально через объект ya.speechkit.settings.
-        //apikey: 'c223db7f-dbd3-4b4e-8857-6b843fdc1f2d',
-        // Эмоциональная окраска: добрый голос.
+       
         emotion: 'good',
-        // Скорость речи.
+       
         speed: 1.0,
-        // Имя диктора.
+     
         speaker: 'jane'  
     });
 
 
 
 tts.speak(
-    // Текст для озвучивания.
+   
     text,
-    // Переопределяем настройки синтеза.
+ 
     {
-        // Имя диктора.
+      
         speaker: 'omazh',
-        // Эмоции в голосе. 
+       
         emotion: 'neutral',
-        // Функция-обработчик, которая будет вызвана по завершении озвучивания.
+      
         stopCallback: function () {
             console.log("Озвучивание текста завершено.");
         }
